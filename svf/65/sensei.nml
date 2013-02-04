@@ -1,0 +1,56 @@
+&project
+  job_name     = 'svf65'
+  restart      = .false.
+  flow_eqn     = 'euler'
+  iter_max     = 20000
+  iter_res     = 100
+  iter_soln    = -1
+  first_order  = 1000
+/
+
+&grid
+  mg_levels       = 1
+  sequence_levels = 1
+  n_ghost_cells   = 2
+/
+
+&fluid
+  gamma   = 1.4
+  r_gas   = 287.0
+/
+
+&flux
+  flux_scheme = 'vanleer'
+  cx2         = 0.0
+  cx4         = 0.03125
+  muscl       = .true.
+  kappa       = -1.0
+  flux_lim    = 'none'
+  freeze_lim  = -1
+/
+
+&time_stepping
+  solver    = 'explicit'
+  rk_steps  = 1
+  cfl       = 0.25
+  cfl_max   = 0.25
+  cfl_ramp  = 10000
+  tolerance = 4.4e-12
+/
+
+&flow_init
+  rho_init(0)      = 1.0
+  vel_init(1:3,0)  = 2.0, 0.0, 0.0
+  p_init(0)        = 12780.0
+  temp_init(0)     = 300.0
+  turb_init(1:4,0) = 0.0
+/
+
+&bc
+bc_order = 2
+/
+
+&exact
+use_exact = .true.
+exact_solution = 'svf'
+/
