@@ -1,0 +1,50 @@
+&project
+  job_name     = 'naca0012_h8'
+  restart      = .false.
+  flow_eqn     = 'euler'
+  iter_max     = 1!50000
+  iter_res     = 100
+  iter_soln    = -1
+/
+
+&grid
+  mg_levels       = 1
+  sequence_levels = 1
+  n_ghost_cells   = 2
+/
+
+&fluid
+  gamma   = 1.4
+  r_gas   = 287.0
+/
+
+&flux
+  flux_scheme = 'vanleer'
+  cx2         = 0.0
+  cx4         = 0.03125
+  muscl       = .false.
+  kappa       = -1.0
+  flux_lim    = 'none'
+  freeze_lim  = -1
+/
+
+&time_stepping
+  solver    = 'explicit'
+  rk_steps  = 4
+  cfl       = 0.5
+  cfl_max   = 0.5
+  cfl_ramp  = 10000
+  tolerance = 4.4e-12
+/
+
+&flow_init
+  rho_init(0)      = 1.17642
+  vel_init(1:3,0)  = 250, 0.0, 0.0
+  p_init(0)        = 101325.0
+  temp_init(0)     = 300.0
+  turb_init(1:4,0) = 0.0
+/
+
+&bc
+  bc_order = 2
+/

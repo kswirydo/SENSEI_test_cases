@@ -1,0 +1,725 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 22.24      2.72     2.72 12351824     0.00     0.00  __limiter_calculations_MOD_update_limiter
+ 17.99      4.92     2.20 49407296     0.00     0.00  __limiter_functions_MOD_limiter_vanleer
+  9.40      6.07     1.15     1000     0.00     0.01  __inviscid_rhs_MOD_form_rhs_i
+  8.67      7.13     1.06 12464000     0.00     0.00  __flux_functions_MOD_flux_vanleer
+  7.20      8.01     0.88 24928000     0.00     0.00  __flux_functions_MOD_speed_of_sound
+  6.79      8.84     0.83     1000     0.00     0.00  __time_step_MOD_time_step_i
+  6.38      9.62     0.78        1     0.78    11.70  __main_MOD_march
+  6.13     10.37     0.75 12464000     0.00     0.00  __face_reconstruction_MOD_map_variables_for_muscl_i
+  4.91     10.97     0.60 12464000     0.00     0.00  __face_reconstruction_MOD_muscl_extrapolation
+  1.72     11.18     0.21  6144000     0.00     0.00  __time_step_MOD_speed_of_sound
+  1.39     11.35     0.17                             _gfortran_select_string
+  0.90     11.46     0.11                             _gfortrani_internal_pack_r8
+  0.82     11.56     0.10   672000     0.00     0.00  __euler_bc_farfield_MOD_euler_farfield_bc_face
+  0.49     11.62     0.06     1000     0.00     0.00  __inviscid_rhs_MOD_check_convergence
+  0.41     11.67     0.05        1     0.05     0.05  __flux_functions_MOD_choose_flux_function
+  0.33     11.71     0.04  2104000     0.00     0.00  __extrap_interp_MOD_face_extrap_secondorder
+  0.33     11.75     0.04  1344000     0.00     0.00  __euler_bc_farfield_MOD_speed_of_sound
+  0.33     11.79     0.04                             __limiter_functions_MOD_limiter_vanalbada
+  0.33     11.83     0.04                             _gfortran_internal_pack
+  0.33     11.87     0.04                             _gfortrani_compare_string
+  0.29     11.91     0.04   224000     0.00     0.00  __euler_bc_farfield_MOD_euler_farfield_bc_ghost
+  0.25     11.94     0.03    48000     0.00     0.00  __euler_bc_face_MOD_set_euler_face_bc_imax
+  0.25     11.97     0.03                             _gfortrani_internal_unpack_r8
+  0.16     11.99     0.02   312000     0.00     0.00  __euler_bc_ghost_MOD_set_bc
+  0.16     12.01     0.02     1000     0.00     0.00  __euler_bc_ghost_MOD_set_ghost_bc_jmin
+  0.16     12.03     0.02                             namelist_write_newline
+  0.08     12.04     0.01  1120000     0.00     0.00  __extrap_interp_MOD_ghost_extrap_face_secondorder
+  0.08     12.05     0.01   440000     0.00     0.00  __extrap_interp_MOD_ghost_extrap_secondorder
+  0.08     12.06     0.01   312000     0.00     0.00  __euler_bc_face_MOD_set_bc_face
+  0.08     12.07     0.01   312000     0.00     0.00  __inviscid_bcflux_MOD_set_bcflux
+  0.08     12.08     0.01   224000     0.00     0.00  __inviscid_bcflux_MOD_set_farfield_bcflux
+  0.08     12.09     0.01   128000     0.00     0.00  __euler_bc_face_MOD_set_euler_face_bc_jmax
+  0.08     12.10     0.01   128000     0.00     0.00  __euler_bc_face_MOD_set_euler_face_bc_jmin
+  0.08     12.11     0.01   128000     0.00     0.00  __inviscid_bcflux_MOD_euler_bc_flux_jmax
+  0.08     12.12     0.01    48000     0.00     0.00  __euler_bc_face_MOD_set_euler_face_bc_imin
+  0.08     12.13     0.01    48000     0.00     0.00  __inviscid_bcflux_MOD_euler_bc_flux_imin
+  0.08     12.14     0.01     1000     0.00     0.00  __euler_bc_ghost_MOD_set_ghost_bc_imax
+  0.08     12.15     0.01     1000     0.00     0.00  __euler_bc_ghost_MOD_set_ghost_bc_jmax
+  0.08     12.16     0.01        1     0.01     0.01  __bcinput_MOD_read_bc_file
+  0.08     12.17     0.01        1     0.01     0.01  __geometry_MOD_fill_derived_grid
+  0.08     12.18     0.01                             __extrap_interp_MOD_ghost_extrap_face_firstorder
+  0.08     12.19     0.01                             __face_reconstruction_MOD_map_variables_for_muscl_ins
+  0.08     12.20     0.01                             __flux_functions_MOD_flux_roe
+  0.08     12.21     0.01                             _gfortrani_get_mem
+  0.08     12.22     0.01                             _gfortrani_memcmp_char4
+  0.08     12.23     0.01                             cleanup
+  0.04     12.23     0.01   224000     0.00     0.00  __euler_bc_farfield_MOD_euler_farfield_bc_flux
+  0.00     12.23     0.00  2104000     0.00     0.00  __extrap_interp_MOD_f_extrap
+  0.00     12.23     0.00  1120000     0.00     0.00  __extrap_interp_MOD_g_extrap_face
+  0.00     12.23     0.00   440000     0.00     0.00  __extrap_interp_MOD_g_extrap
+  0.00     12.23     0.00   224000     0.00     0.00  __euler_bc_farfield_MOD_euler_flux
+  0.00     12.23     0.00   224000     0.00     0.00  __euler_bc_farfield_MOD_set_farfield_bc_face
+  0.00     12.23     0.00   224000     0.00     0.00  __euler_bc_farfield_MOD_set_farfield_bc_ghost
+  0.00     12.23     0.00   112176     0.00     0.00  __limiter_calculations_MOD_frozen_limiter
+  0.00     12.23     0.00    88000     0.00     0.00  __euler_bc_wall_MOD_euler_slip_wall_bc_face
+  0.00     12.23     0.00    88000     0.00     0.00  __euler_bc_wall_MOD_euler_slip_wall_bc_ghost
+  0.00     12.23     0.00    88000     0.00     0.00  __euler_bc_wall_MOD_set_wall_bc_face
+  0.00     12.23     0.00    88000     0.00     0.00  __euler_bc_wall_MOD_set_wall_bc_ghost
+  0.00     12.23     0.00    88000     0.00     0.00  __inviscid_bcflux_MOD_euler_bc_flux_jmin
+  0.00     12.23     0.00    88000     0.00     0.00  __inviscid_bcflux_MOD_set_wall_bcflux
+  0.00     12.23     0.00    48000     0.00     0.00  __inviscid_bcflux_MOD_euler_bc_flux_imax
+  0.00     12.23     0.00    24752     0.00     0.00  __geometry_MOD_cross_product
+  0.00     12.23     0.00    24752     0.00     0.00  __geometry_MOD_vector_norm
+  0.00     12.23     0.00     1000     0.00     0.00  __euler_bc_ghost_MOD_euler_bc_ghost_update
+  0.00     12.23     0.00     1000     0.00     0.00  __euler_bc_ghost_MOD_set_ghost_bc_imin
+  0.00     12.23     0.00     1000     0.00     0.00  __solution_helper_MOD_interchange_block_data_euler
+  0.00     12.23     0.00      224     0.00     0.00  __eos_MOD_perfect_pt_to_rho
+  0.00     12.23     0.00      224     0.00     0.00  __io_bc_farfield_MOD_read_bc_farfield
+  0.00     12.23     0.00      224     0.00     0.00  __io_bc_farfield_MOD_speed_of_sound
+  0.00     12.23     0.00       88     0.00     0.00  __io_bc_wall_MOD_read_bc_wall
+  0.00     12.23     0.00       12     0.00     0.00  __bcinput_MOD_shift_indicies_to_nodes
+  0.00     12.23     0.00        8     0.00     0.00  __bcinput_MOD_shift_indicies_to_cells
+  0.00     12.23     0.00        6     0.00     0.00  __bcinput_MOD_assign_bc_type
+  0.00     12.23     0.00        6     0.00     0.00  __bcinput_MOD_assign_grid_connections
+  0.00     12.23     0.00        6     0.00     0.00  __bcinput_MOD_read_bc_data
+  0.00     12.23     0.00        3     0.00     0.00  __io_MOD_find_available_unit
+  0.00     12.23     0.00        3     0.00     0.00  __io_MOD_open_existing_file
+  0.00     12.23     0.00        3     0.00     0.00  __soln_derived_type_MOD_allocate_soln_limiter
+  0.00     12.23     0.00        3     0.00     0.00  __soln_derived_type_MOD_deallocate_soln_limiter
+  0.00     12.23     0.00        1     0.00    11.72  MAIN__
+  0.00     12.23     0.00        1     0.00     0.00  __bcinput_MOD_get_bc_dim
+  0.00     12.23     0.00        1     0.00     0.00  __eos_MOD_choose_equation_of_state
+  0.00     12.23     0.00        1     0.00     0.00  __fluid_constants_MOD_set_fluid_constants
+  0.00     12.23     0.00        1     0.00     0.01  __geometry_MOD_fill_grid_block
+  0.00     12.23     0.00        1     0.00     0.01  __geometry_MOD_form_derived_grid
+  0.00     12.23     0.00        1     0.00     0.00  __geometry_MOD_read_grid_file
+  0.00     12.23     0.00        1     0.00     0.00  __geometry_MOD_read_single_block_plot2d_grid
+  0.00     12.23     0.00        1     0.00     0.00  __grid_derived_type_MOD_allocate_blocks_in_grid
+  0.00     12.23     0.00        1     0.00     0.00  __grid_derived_type_MOD_allocate_derived_grid
+  0.00     12.23     0.00        1     0.00     0.00  __grid_derived_type_MOD_allocate_grid_block
+  0.00     12.23     0.00        1     0.00     0.00  __grid_derived_type_MOD_deallocate_derived_grid
+  0.00     12.23     0.00        1     0.00     0.00  __grid_derived_type_MOD_deallocate_grid
+  0.00     12.23     0.00        1     0.00     0.00  __grid_derived_type_MOD_deallocate_grid_block
+  0.00     12.23     0.00        1     0.00     0.00  __limiter_functions_MOD_choose_limiter_function
+  0.00     12.23     0.00        1     0.00     0.00  __main_MOD_clean_up_soln_grid
+  0.00     12.23     0.00        1     0.00     0.00  __main_MOD_compute_exact_solution_and_source
+  0.00     12.23     0.00        1     0.00     0.02  __main_MOD_initialize
+  0.00     12.23     0.00        1     0.00     0.00  __main_MOD_initialize_soln
+  0.00     12.23     0.00        1     0.00     0.00  __main_MOD_setup_soln_for_eqn_type
+  0.00     12.23     0.00        1     0.00     0.00  __namelist_MOD_read_nml
+  0.00     12.23     0.00        1     0.00     0.00  __set_constants_MOD_set_pi
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_allocate_blocks_in_soln
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_allocate_soln_grad
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_allocate_soln_old
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_allocate_soln_sblock
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_deallocate_soln
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_deallocate_soln_grad
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_deallocate_soln_old
+  0.00     12.23     0.00        1     0.00     0.00  __soln_derived_type_MOD_deallocate_soln_sblock
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.08% of 12.23 seconds
+
+index % time    self  children    called     name
+                0.00   11.72       1/1           main [2]
+[1]     95.8    0.00   11.72       1         MAIN__ [1]
+                0.78   10.92       1/1           __main_MOD_march [3]
+                0.00    0.02       1/1           __main_MOD_initialize [46]
+                0.00    0.00       1/1           __main_MOD_clean_up_soln_grid [237]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     95.8    0.00   11.72                 main [2]
+                0.00   11.72       1/1           MAIN__ [1]
+-----------------------------------------------
+                0.78   10.92       1/1           MAIN__ [1]
+[3]     95.7    0.78   10.92       1         __main_MOD_march [3]
+                1.15    8.45    1000/1000        __inviscid_rhs_MOD_form_rhs_i [4]
+                0.83    0.21    1000/1000        __time_step_MOD_time_step_i [8]
+                0.00    0.17    1000/1000        __euler_bc_ghost_MOD_euler_bc_ghost_update [14]
+                0.06    0.00    1000/1000        __inviscid_rhs_MOD_check_convergence [25]
+                0.05    0.00       1/1           __flux_functions_MOD_choose_flux_function [28]
+                0.00    0.00    1000/1000        __solution_helper_MOD_interchange_block_data_euler [211]
+                0.00    0.00       1/1           __limiter_functions_MOD_choose_limiter_function [236]
+                0.00    0.00       1/1           __soln_derived_type_MOD_allocate_soln_old [245]
+                0.00    0.00       1/1           __soln_derived_type_MOD_deallocate_soln_old [249]
+-----------------------------------------------
+                1.15    8.45    1000/1000        __main_MOD_march [3]
+[4]     78.5    1.15    8.45    1000         __inviscid_rhs_MOD_form_rhs_i [4]
+                2.72    2.20 12351824/12351824     __limiter_calculations_MOD_update_limiter [5]
+                1.06    0.88 12464000/12464000     __flux_functions_MOD_flux_vanleer [7]
+                0.75    0.00 12464000/12464000     __face_reconstruction_MOD_map_variables_for_muscl_i [10]
+                0.60    0.00 12464000/12464000     __face_reconstruction_MOD_muscl_extrapolation [11]
+                0.01    0.04  128000/128000      __inviscid_bcflux_MOD_euler_bc_flux_jmax [29]
+                0.03    0.01   48000/48000       __euler_bc_face_MOD_set_euler_face_bc_imax [30]
+                0.01    0.03  128000/128000      __euler_bc_face_MOD_set_euler_face_bc_jmax [37]
+                0.01    0.02  128000/128000      __euler_bc_face_MOD_set_euler_face_bc_jmin [40]
+                0.00    0.02   88000/88000       __inviscid_bcflux_MOD_euler_bc_flux_jmin [41]
+                0.01    0.01   48000/48000       __inviscid_bcflux_MOD_euler_bc_flux_imin [42]
+                0.01    0.01   48000/48000       __euler_bc_face_MOD_set_euler_face_bc_imin [43]
+                0.00    0.01   48000/48000       __inviscid_bcflux_MOD_euler_bc_flux_imax [47]
+                0.00    0.00  112176/112176      __limiter_calculations_MOD_frozen_limiter [206]
+-----------------------------------------------
+                2.72    2.20 12351824/12351824     __inviscid_rhs_MOD_form_rhs_i [4]
+[5]     40.2    2.72    2.20 12351824         __limiter_calculations_MOD_update_limiter [5]
+                2.20    0.00 49407296/49407296     __limiter_functions_MOD_limiter_vanleer [6]
+-----------------------------------------------
+                2.20    0.00 49407296/49407296     __limiter_calculations_MOD_update_limiter [5]
+[6]     18.0    2.20    0.00 49407296         __limiter_functions_MOD_limiter_vanleer [6]
+-----------------------------------------------
+                1.06    0.88 12464000/12464000     __inviscid_rhs_MOD_form_rhs_i [4]
+[7]     15.9    1.06    0.88 12464000         __flux_functions_MOD_flux_vanleer [7]
+                0.88    0.00 24928000/24928000     __flux_functions_MOD_speed_of_sound [9]
+-----------------------------------------------
+                0.83    0.21    1000/1000        __main_MOD_march [3]
+[8]      8.5    0.83    0.21    1000         __time_step_MOD_time_step_i [8]
+                0.21    0.00 6144000/6144000     __time_step_MOD_speed_of_sound [12]
+-----------------------------------------------
+                0.88    0.00 24928000/24928000     __flux_functions_MOD_flux_vanleer [7]
+[9]      7.2    0.88    0.00 24928000         __flux_functions_MOD_speed_of_sound [9]
+-----------------------------------------------
+                0.75    0.00 12464000/12464000     __inviscid_rhs_MOD_form_rhs_i [4]
+[10]     6.1    0.75    0.00 12464000         __face_reconstruction_MOD_map_variables_for_muscl_i [10]
+-----------------------------------------------
+                0.60    0.00 12464000/12464000     __inviscid_rhs_MOD_form_rhs_i [4]
+[11]     4.9    0.60    0.00 12464000         __face_reconstruction_MOD_muscl_extrapolation [11]
+-----------------------------------------------
+                0.21    0.00 6144000/6144000     __time_step_MOD_time_step_i [8]
+[12]     1.7    0.21    0.00 6144000         __time_step_MOD_speed_of_sound [12]
+-----------------------------------------------
+                0.03    0.03  224000/672000      __euler_bc_farfield_MOD_euler_farfield_bc_ghost [18]
+                0.03    0.03  224000/672000      __euler_bc_farfield_MOD_euler_farfield_bc_flux [24]
+                0.03    0.03  224000/672000      __euler_bc_farfield_MOD_set_farfield_bc_face [26]
+[13]     1.5    0.10    0.08  672000         __euler_bc_farfield_MOD_euler_farfield_bc_face [13]
+                0.04    0.00 1344000/1344000     __euler_bc_farfield_MOD_speed_of_sound [33]
+                0.00    0.04 2016000/2104000     __extrap_interp_MOD_f_extrap [31]
+-----------------------------------------------
+                0.00    0.17    1000/1000        __main_MOD_march [3]
+[14]     1.4    0.00    0.17    1000         __euler_bc_ghost_MOD_euler_bc_ghost_update [14]
+                0.01    0.06    1000/1000        __euler_bc_ghost_MOD_set_ghost_bc_jmax [23]
+                0.02    0.04    1000/1000        __euler_bc_ghost_MOD_set_ghost_bc_jmin [27]
+                0.01    0.02    1000/1000        __euler_bc_ghost_MOD_set_ghost_bc_imax [38]
+                0.00    0.02    1000/1000        __euler_bc_ghost_MOD_set_ghost_bc_imin [44]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     1.4    0.17    0.00                 _gfortran_select_string [15]
+-----------------------------------------------
+                0.00    0.02   48000/312000      __euler_bc_ghost_MOD_set_ghost_bc_imax [38]
+                0.00    0.02   48000/312000      __euler_bc_ghost_MOD_set_ghost_bc_imin [44]
+                0.01    0.03   88000/312000      __euler_bc_ghost_MOD_set_ghost_bc_jmin [27]
+                0.01    0.05  128000/312000      __euler_bc_ghost_MOD_set_ghost_bc_jmax [23]
+[16]     1.1    0.02    0.11  312000         __euler_bc_ghost_MOD_set_bc [16]
+                0.00    0.10  224000/224000      __euler_bc_farfield_MOD_set_farfield_bc_ghost [19]
+                0.00    0.01   88000/88000       __euler_bc_wall_MOD_set_wall_bc_ghost [54]
+-----------------------------------------------
+                                                 <spontaneous>
+[17]     0.9    0.11    0.00                 _gfortrani_internal_pack_r8 [17]
+-----------------------------------------------
+                0.04    0.07  224000/224000      __euler_bc_farfield_MOD_set_farfield_bc_ghost [19]
+[18]     0.9    0.04    0.07  224000         __euler_bc_farfield_MOD_euler_farfield_bc_ghost [18]
+                0.03    0.03  224000/672000      __euler_bc_farfield_MOD_euler_farfield_bc_face [13]
+                0.00    0.01 1120000/1120000     __extrap_interp_MOD_g_extrap_face [49]
+-----------------------------------------------
+                0.00    0.10  224000/224000      __euler_bc_ghost_MOD_set_bc [16]
+[19]     0.9    0.00    0.10  224000         __euler_bc_farfield_MOD_set_farfield_bc_ghost [19]
+                0.04    0.07  224000/224000      __euler_bc_farfield_MOD_euler_farfield_bc_ghost [18]
+-----------------------------------------------
+                0.00    0.01   48000/312000      __inviscid_bcflux_MOD_euler_bc_flux_imax [47]
+                0.00    0.01   48000/312000      __inviscid_bcflux_MOD_euler_bc_flux_imin [42]
+                0.00    0.02   88000/312000      __inviscid_bcflux_MOD_euler_bc_flux_jmin [41]
+                0.00    0.03  128000/312000      __inviscid_bcflux_MOD_euler_bc_flux_jmax [29]
+[20]     0.7    0.01    0.08  312000         __inviscid_bcflux_MOD_set_bcflux [20]
+                0.01    0.06  224000/224000      __inviscid_bcflux_MOD_set_farfield_bcflux [21]
+                0.00    0.00   88000/88000       __inviscid_bcflux_MOD_set_wall_bcflux [64]
+-----------------------------------------------
+                0.01    0.06  224000/224000      __inviscid_bcflux_MOD_set_bcflux [20]
+[21]     0.6    0.01    0.06  224000         __inviscid_bcflux_MOD_set_farfield_bcflux [21]
+                0.01    0.06  224000/224000      __euler_bc_farfield_MOD_euler_farfield_bc_flux [24]
+-----------------------------------------------
+                0.00    0.01   48000/312000      __euler_bc_face_MOD_set_euler_face_bc_imax [30]
+                0.00    0.01   48000/312000      __euler_bc_face_MOD_set_euler_face_bc_imin [43]
+                0.00    0.02   88000/312000      __euler_bc_face_MOD_set_euler_face_bc_jmin [40]
+                0.00    0.02  128000/312000      __euler_bc_face_MOD_set_euler_face_bc_jmax [37]
+[22]     0.6    0.01    0.06  312000         __euler_bc_face_MOD_set_bc_face [22]
+                0.00    0.06  224000/224000      __euler_bc_farfield_MOD_set_farfield_bc_face [26]
+                0.00    0.00   88000/88000       __euler_bc_wall_MOD_set_wall_bc_face [208]
+-----------------------------------------------
+                0.01    0.06    1000/1000        __euler_bc_ghost_MOD_euler_bc_ghost_update [14]
+[23]     0.5    0.01    0.06    1000         __euler_bc_ghost_MOD_set_ghost_bc_jmax [23]
+                0.01    0.05  128000/312000      __euler_bc_ghost_MOD_set_bc [16]
+-----------------------------------------------
+                0.01    0.06  224000/224000      __inviscid_bcflux_MOD_set_farfield_bcflux [21]
+[24]     0.5    0.01    0.06  224000         __euler_bc_farfield_MOD_euler_farfield_bc_flux [24]
+                0.03    0.03  224000/672000      __euler_bc_farfield_MOD_euler_farfield_bc_face [13]
+                0.00    0.00  224000/224000      __euler_bc_farfield_MOD_euler_flux [205]
+-----------------------------------------------
+                0.06    0.00    1000/1000        __main_MOD_march [3]
+[25]     0.5    0.06    0.00    1000         __inviscid_rhs_MOD_check_convergence [25]
+-----------------------------------------------
+                0.00    0.06  224000/224000      __euler_bc_face_MOD_set_bc_face [22]
+[26]     0.5    0.00    0.06  224000         __euler_bc_farfield_MOD_set_farfield_bc_face [26]
+                0.03    0.03  224000/672000      __euler_bc_farfield_MOD_euler_farfield_bc_face [13]
+-----------------------------------------------
+                0.02    0.04    1000/1000        __euler_bc_ghost_MOD_euler_bc_ghost_update [14]
+[27]     0.5    0.02    0.04    1000         __euler_bc_ghost_MOD_set_ghost_bc_jmin [27]
+                0.01    0.03   88000/312000      __euler_bc_ghost_MOD_set_bc [16]
+-----------------------------------------------
+                0.05    0.00       1/1           __main_MOD_march [3]
+[28]     0.4    0.05    0.00       1         __flux_functions_MOD_choose_flux_function [28]
+-----------------------------------------------
+                0.01    0.04  128000/128000      __inviscid_rhs_MOD_form_rhs_i [4]
+[29]     0.4    0.01    0.04  128000         __inviscid_bcflux_MOD_euler_bc_flux_jmax [29]
+                0.00    0.03  128000/312000      __inviscid_bcflux_MOD_set_bcflux [20]
+-----------------------------------------------
+                0.03    0.01   48000/48000       __inviscid_rhs_MOD_form_rhs_i [4]
+[30]     0.3    0.03    0.01   48000         __euler_bc_face_MOD_set_euler_face_bc_imax [30]
+                0.00    0.01   48000/312000      __euler_bc_face_MOD_set_bc_face [22]
+-----------------------------------------------
+                0.00    0.00   88000/2104000     __inviscid_bcflux_MOD_set_wall_bcflux [64]
+                0.00    0.04 2016000/2104000     __euler_bc_farfield_MOD_euler_farfield_bc_face [13]
+[31]     0.3    0.00    0.04 2104000         __extrap_interp_MOD_f_extrap [31]
+                0.04    0.00 2104000/2104000     __extrap_interp_MOD_face_extrap_secondorder [32]
+-----------------------------------------------
+                0.04    0.00 2104000/2104000     __extrap_interp_MOD_f_extrap [31]
+[32]     0.3    0.04    0.00 2104000         __extrap_interp_MOD_face_extrap_secondorder [32]
+-----------------------------------------------
+                0.04    0.00 1344000/1344000     __euler_bc_farfield_MOD_euler_farfield_bc_face [13]
+[33]     0.3    0.04    0.00 1344000         __euler_bc_farfield_MOD_speed_of_sound [33]
+-----------------------------------------------
+                                                 <spontaneous>
+[34]     0.3    0.04    0.00                 __limiter_functions_MOD_limiter_vanalbada [34]
+-----------------------------------------------
+                                                 <spontaneous>
+[35]     0.3    0.04    0.00                 _gfortran_internal_pack [35]
+-----------------------------------------------
+                                                 <spontaneous>
+[36]     0.3    0.04    0.00                 _gfortrani_compare_string [36]
+-----------------------------------------------
+                0.01    0.03  128000/128000      __inviscid_rhs_MOD_form_rhs_i [4]
+[37]     0.3    0.01    0.03  128000         __euler_bc_face_MOD_set_euler_face_bc_jmax [37]
+                0.00    0.02  128000/312000      __euler_bc_face_MOD_set_bc_face [22]
+-----------------------------------------------
+                0.01    0.02    1000/1000        __euler_bc_ghost_MOD_euler_bc_ghost_update [14]
+[38]     0.3    0.01    0.02    1000         __euler_bc_ghost_MOD_set_ghost_bc_imax [38]
+                0.00    0.02   48000/312000      __euler_bc_ghost_MOD_set_bc [16]
+-----------------------------------------------
+                                                 <spontaneous>
+[39]     0.2    0.03    0.00                 _gfortrani_internal_unpack_r8 [39]
+-----------------------------------------------
+                0.01    0.02  128000/128000      __inviscid_rhs_MOD_form_rhs_i [4]
+[40]     0.2    0.01    0.02  128000         __euler_bc_face_MOD_set_euler_face_bc_jmin [40]
+                0.00    0.02   88000/312000      __euler_bc_face_MOD_set_bc_face [22]
+-----------------------------------------------
+                0.00    0.02   88000/88000       __inviscid_rhs_MOD_form_rhs_i [4]
+[41]     0.2    0.00    0.02   88000         __inviscid_bcflux_MOD_euler_bc_flux_jmin [41]
+                0.00    0.02   88000/312000      __inviscid_bcflux_MOD_set_bcflux [20]
+-----------------------------------------------
+                0.01    0.01   48000/48000       __inviscid_rhs_MOD_form_rhs_i [4]
+[42]     0.2    0.01    0.01   48000         __inviscid_bcflux_MOD_euler_bc_flux_imin [42]
+                0.00    0.01   48000/312000      __inviscid_bcflux_MOD_set_bcflux [20]
+-----------------------------------------------
+                0.01    0.01   48000/48000       __inviscid_rhs_MOD_form_rhs_i [4]
+[43]     0.2    0.01    0.01   48000         __euler_bc_face_MOD_set_euler_face_bc_imin [43]
+                0.00    0.01   48000/312000      __euler_bc_face_MOD_set_bc_face [22]
+-----------------------------------------------
+                0.00    0.02    1000/1000        __euler_bc_ghost_MOD_euler_bc_ghost_update [14]
+[44]     0.2    0.00    0.02    1000         __euler_bc_ghost_MOD_set_ghost_bc_imin [44]
+                0.00    0.02   48000/312000      __euler_bc_ghost_MOD_set_bc [16]
+-----------------------------------------------
+                                                 <spontaneous>
+[45]     0.2    0.02    0.00                 namelist_write_newline [45]
+-----------------------------------------------
+                0.00    0.02       1/1           MAIN__ [1]
+[46]     0.2    0.00    0.02       1         __main_MOD_initialize [46]
+                0.00    0.01       1/1           __geometry_MOD_form_derived_grid [58]
+                0.01    0.00       1/1           __bcinput_MOD_read_bc_file [55]
+                0.00    0.00       1/1           __namelist_MOD_read_nml [241]
+                0.00    0.00       1/1           __set_constants_MOD_set_pi [242]
+                0.00    0.00       1/1           __eos_MOD_choose_equation_of_state [226]
+                0.00    0.00       1/1           __geometry_MOD_read_grid_file [228]
+                0.00    0.00       1/1           __fluid_constants_MOD_set_fluid_constants [227]
+                0.00    0.00       1/1           __main_MOD_setup_soln_for_eqn_type [240]
+                0.00    0.00       1/1           __main_MOD_compute_exact_solution_and_source [238]
+                0.00    0.00       1/1           __main_MOD_initialize_soln [239]
+-----------------------------------------------
+                0.00    0.01   48000/48000       __inviscid_rhs_MOD_form_rhs_i [4]
+[47]     0.1    0.00    0.01   48000         __inviscid_bcflux_MOD_euler_bc_flux_imax [47]
+                0.00    0.01   48000/312000      __inviscid_bcflux_MOD_set_bcflux [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[48]     0.1    0.01    0.00                 cleanup [48]
+-----------------------------------------------
+                0.00    0.01 1120000/1120000     __euler_bc_farfield_MOD_euler_farfield_bc_ghost [18]
+[49]     0.1    0.00    0.01 1120000         __extrap_interp_MOD_g_extrap_face [49]
+                0.01    0.00 1120000/1120000     __extrap_interp_MOD_ghost_extrap_face_secondorder [50]
+-----------------------------------------------
+                0.01    0.00 1120000/1120000     __extrap_interp_MOD_g_extrap_face [49]
+[50]     0.1    0.01    0.00 1120000         __extrap_interp_MOD_ghost_extrap_face_secondorder [50]
+-----------------------------------------------
+                0.00    0.01  440000/440000      __euler_bc_wall_MOD_euler_slip_wall_bc_ghost [53]
+[51]     0.1    0.00    0.01  440000         __extrap_interp_MOD_g_extrap [51]
+                0.01    0.00  440000/440000      __extrap_interp_MOD_ghost_extrap_secondorder [52]
+-----------------------------------------------
+                0.01    0.00  440000/440000      __extrap_interp_MOD_g_extrap [51]
+[52]     0.1    0.01    0.00  440000         __extrap_interp_MOD_ghost_extrap_secondorder [52]
+-----------------------------------------------
+                0.00    0.01   88000/88000       __euler_bc_wall_MOD_set_wall_bc_ghost [54]
+[53]     0.1    0.00    0.01   88000         __euler_bc_wall_MOD_euler_slip_wall_bc_ghost [53]
+                0.00    0.01  440000/440000      __extrap_interp_MOD_g_extrap [51]
+-----------------------------------------------
+                0.00    0.01   88000/88000       __euler_bc_ghost_MOD_set_bc [16]
+[54]     0.1    0.00    0.01   88000         __euler_bc_wall_MOD_set_wall_bc_ghost [54]
+                0.00    0.01   88000/88000       __euler_bc_wall_MOD_euler_slip_wall_bc_ghost [53]
+-----------------------------------------------
+                0.01    0.00       1/1           __main_MOD_initialize [46]
+[55]     0.1    0.01    0.00       1         __bcinput_MOD_read_bc_file [55]
+                0.00    0.00       8/8           __bcinput_MOD_shift_indicies_to_cells [217]
+                0.00    0.00       6/6           __bcinput_MOD_assign_grid_connections [219]
+                0.00    0.00       6/6           __bcinput_MOD_assign_bc_type [218]
+                0.00    0.00       6/6           __bcinput_MOD_read_bc_data [220]
+                0.00    0.00       1/3           __io_MOD_open_existing_file [222]
+                0.00    0.00       1/1           __bcinput_MOD_get_bc_dim [225]
+-----------------------------------------------
+                0.01    0.00       1/1           __geometry_MOD_fill_grid_block [57]
+[56]     0.1    0.01    0.00       1         __geometry_MOD_fill_derived_grid [56]
+                0.00    0.00   24752/24752       __geometry_MOD_cross_product [209]
+                0.00    0.00   24752/24752       __geometry_MOD_vector_norm [210]
+-----------------------------------------------
+                0.00    0.01       1/1           __geometry_MOD_form_derived_grid [58]
+[57]     0.1    0.00    0.01       1         __geometry_MOD_fill_grid_block [57]
+                0.01    0.00       1/1           __geometry_MOD_fill_derived_grid [56]
+                0.00    0.00       1/1           __grid_derived_type_MOD_allocate_derived_grid [231]
+-----------------------------------------------
+                0.00    0.01       1/1           __main_MOD_initialize [46]
+[58]     0.1    0.00    0.01       1         __geometry_MOD_form_derived_grid [58]
+                0.00    0.01       1/1           __geometry_MOD_fill_grid_block [57]
+-----------------------------------------------
+                                                 <spontaneous>
+[59]     0.1    0.01    0.00                 __extrap_interp_MOD_ghost_extrap_face_firstorder [59]
+-----------------------------------------------
+                                                 <spontaneous>
+[60]     0.1    0.01    0.00                 __face_reconstruction_MOD_map_variables_for_muscl_ins [60]
+-----------------------------------------------
+                                                 <spontaneous>
+[61]     0.1    0.01    0.00                 __flux_functions_MOD_flux_roe [61]
+-----------------------------------------------
+                                                 <spontaneous>
+[62]     0.1    0.01    0.00                 _gfortrani_get_mem [62]
+-----------------------------------------------
+                                                 <spontaneous>
+[63]     0.1    0.01    0.00                 _gfortrani_memcmp_char4 [63]
+-----------------------------------------------
+                0.00    0.00   88000/88000       __inviscid_bcflux_MOD_set_bcflux [20]
+[64]     0.0    0.00    0.00   88000         __inviscid_bcflux_MOD_set_wall_bcflux [64]
+                0.00    0.00   88000/2104000     __extrap_interp_MOD_f_extrap [31]
+-----------------------------------------------
+                0.00    0.00  224000/224000      __euler_bc_farfield_MOD_euler_farfield_bc_flux [24]
+[205]    0.0    0.00    0.00  224000         __euler_bc_farfield_MOD_euler_flux [205]
+-----------------------------------------------
+                0.00    0.00  112176/112176      __inviscid_rhs_MOD_form_rhs_i [4]
+[206]    0.0    0.00    0.00  112176         __limiter_calculations_MOD_frozen_limiter [206]
+-----------------------------------------------
+                0.00    0.00   88000/88000       __euler_bc_wall_MOD_set_wall_bc_face [208]
+[207]    0.0    0.00    0.00   88000         __euler_bc_wall_MOD_euler_slip_wall_bc_face [207]
+-----------------------------------------------
+                0.00    0.00   88000/88000       __euler_bc_face_MOD_set_bc_face [22]
+[208]    0.0    0.00    0.00   88000         __euler_bc_wall_MOD_set_wall_bc_face [208]
+                0.00    0.00   88000/88000       __euler_bc_wall_MOD_euler_slip_wall_bc_face [207]
+-----------------------------------------------
+                0.00    0.00   24752/24752       __geometry_MOD_fill_derived_grid [56]
+[209]    0.0    0.00    0.00   24752         __geometry_MOD_cross_product [209]
+-----------------------------------------------
+                0.00    0.00   24752/24752       __geometry_MOD_fill_derived_grid [56]
+[210]    0.0    0.00    0.00   24752         __geometry_MOD_vector_norm [210]
+-----------------------------------------------
+                0.00    0.00    1000/1000        __main_MOD_march [3]
+[211]    0.0    0.00    0.00    1000         __solution_helper_MOD_interchange_block_data_euler [211]
+-----------------------------------------------
+                0.00    0.00     224/224         __io_bc_farfield_MOD_read_bc_farfield [213]
+[212]    0.0    0.00    0.00     224         __eos_MOD_perfect_pt_to_rho [212]
+-----------------------------------------------
+                0.00    0.00     224/224         __bcinput_MOD_read_bc_data [220]
+[213]    0.0    0.00    0.00     224         __io_bc_farfield_MOD_read_bc_farfield [213]
+                0.00    0.00     224/224         __eos_MOD_perfect_pt_to_rho [212]
+                0.00    0.00     224/224         __io_bc_farfield_MOD_speed_of_sound [214]
+-----------------------------------------------
+                0.00    0.00     224/224         __io_bc_farfield_MOD_read_bc_farfield [213]
+[214]    0.0    0.00    0.00     224         __io_bc_farfield_MOD_speed_of_sound [214]
+-----------------------------------------------
+                0.00    0.00      88/88          __bcinput_MOD_read_bc_data [220]
+[215]    0.0    0.00    0.00      88         __io_bc_wall_MOD_read_bc_wall [215]
+-----------------------------------------------
+                0.00    0.00      12/12          __bcinput_MOD_assign_grid_connections [219]
+[216]    0.0    0.00    0.00      12         __bcinput_MOD_shift_indicies_to_nodes [216]
+-----------------------------------------------
+                0.00    0.00       8/8           __bcinput_MOD_read_bc_file [55]
+[217]    0.0    0.00    0.00       8         __bcinput_MOD_shift_indicies_to_cells [217]
+-----------------------------------------------
+                0.00    0.00       6/6           __bcinput_MOD_read_bc_file [55]
+[218]    0.0    0.00    0.00       6         __bcinput_MOD_assign_bc_type [218]
+-----------------------------------------------
+                0.00    0.00       6/6           __bcinput_MOD_read_bc_file [55]
+[219]    0.0    0.00    0.00       6         __bcinput_MOD_assign_grid_connections [219]
+                0.00    0.00      12/12          __bcinput_MOD_shift_indicies_to_nodes [216]
+-----------------------------------------------
+                0.00    0.00       6/6           __bcinput_MOD_read_bc_file [55]
+[220]    0.0    0.00    0.00       6         __bcinput_MOD_read_bc_data [220]
+                0.00    0.00     224/224         __io_bc_farfield_MOD_read_bc_farfield [213]
+                0.00    0.00      88/88          __io_bc_wall_MOD_read_bc_wall [215]
+-----------------------------------------------
+                0.00    0.00       3/3           __io_MOD_open_existing_file [222]
+[221]    0.0    0.00    0.00       3         __io_MOD_find_available_unit [221]
+-----------------------------------------------
+                0.00    0.00       1/3           __bcinput_MOD_read_bc_file [55]
+                0.00    0.00       1/3           __geometry_MOD_read_grid_file [228]
+                0.00    0.00       1/3           __namelist_MOD_read_nml [241]
+[222]    0.0    0.00    0.00       3         __io_MOD_open_existing_file [222]
+                0.00    0.00       3/3           __io_MOD_find_available_unit [221]
+-----------------------------------------------
+                0.00    0.00       3/3           __soln_derived_type_MOD_allocate_soln_sblock [246]
+[223]    0.0    0.00    0.00       3         __soln_derived_type_MOD_allocate_soln_limiter [223]
+-----------------------------------------------
+                0.00    0.00       3/3           __soln_derived_type_MOD_deallocate_soln_sblock [250]
+[224]    0.0    0.00    0.00       3         __soln_derived_type_MOD_deallocate_soln_limiter [224]
+-----------------------------------------------
+                0.00    0.00       1/1           __bcinput_MOD_read_bc_file [55]
+[225]    0.0    0.00    0.00       1         __bcinput_MOD_get_bc_dim [225]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[226]    0.0    0.00    0.00       1         __eos_MOD_choose_equation_of_state [226]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[227]    0.0    0.00    0.00       1         __fluid_constants_MOD_set_fluid_constants [227]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[228]    0.0    0.00    0.00       1         __geometry_MOD_read_grid_file [228]
+                0.00    0.00       1/3           __io_MOD_open_existing_file [222]
+                0.00    0.00       1/1           __geometry_MOD_read_single_block_plot2d_grid [229]
+-----------------------------------------------
+                0.00    0.00       1/1           __geometry_MOD_read_grid_file [228]
+[229]    0.0    0.00    0.00       1         __geometry_MOD_read_single_block_plot2d_grid [229]
+                0.00    0.00       1/1           __grid_derived_type_MOD_allocate_blocks_in_grid [230]
+                0.00    0.00       1/1           __grid_derived_type_MOD_allocate_grid_block [232]
+-----------------------------------------------
+                0.00    0.00       1/1           __geometry_MOD_read_single_block_plot2d_grid [229]
+[230]    0.0    0.00    0.00       1         __grid_derived_type_MOD_allocate_blocks_in_grid [230]
+-----------------------------------------------
+                0.00    0.00       1/1           __geometry_MOD_fill_grid_block [57]
+[231]    0.0    0.00    0.00       1         __grid_derived_type_MOD_allocate_derived_grid [231]
+-----------------------------------------------
+                0.00    0.00       1/1           __geometry_MOD_read_single_block_plot2d_grid [229]
+[232]    0.0    0.00    0.00       1         __grid_derived_type_MOD_allocate_grid_block [232]
+-----------------------------------------------
+                0.00    0.00       1/1           __grid_derived_type_MOD_deallocate_grid_block [235]
+[233]    0.0    0.00    0.00       1         __grid_derived_type_MOD_deallocate_derived_grid [233]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_clean_up_soln_grid [237]
+[234]    0.0    0.00    0.00       1         __grid_derived_type_MOD_deallocate_grid [234]
+                0.00    0.00       1/1           __grid_derived_type_MOD_deallocate_grid_block [235]
+-----------------------------------------------
+                0.00    0.00       1/1           __grid_derived_type_MOD_deallocate_grid [234]
+[235]    0.0    0.00    0.00       1         __grid_derived_type_MOD_deallocate_grid_block [235]
+                0.00    0.00       1/1           __grid_derived_type_MOD_deallocate_derived_grid [233]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_march [3]
+[236]    0.0    0.00    0.00       1         __limiter_functions_MOD_choose_limiter_function [236]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [1]
+[237]    0.0    0.00    0.00       1         __main_MOD_clean_up_soln_grid [237]
+                0.00    0.00       1/1           __grid_derived_type_MOD_deallocate_grid [234]
+                0.00    0.00       1/1           __soln_derived_type_MOD_deallocate_soln [247]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[238]    0.0    0.00    0.00       1         __main_MOD_compute_exact_solution_and_source [238]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[239]    0.0    0.00    0.00       1         __main_MOD_initialize_soln [239]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[240]    0.0    0.00    0.00       1         __main_MOD_setup_soln_for_eqn_type [240]
+                0.00    0.00       1/1           __soln_derived_type_MOD_allocate_blocks_in_soln [243]
+                0.00    0.00       1/1           __soln_derived_type_MOD_allocate_soln_sblock [246]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[241]    0.0    0.00    0.00       1         __namelist_MOD_read_nml [241]
+                0.00    0.00       1/3           __io_MOD_open_existing_file [222]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_initialize [46]
+[242]    0.0    0.00    0.00       1         __set_constants_MOD_set_pi [242]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_setup_soln_for_eqn_type [240]
+[243]    0.0    0.00    0.00       1         __soln_derived_type_MOD_allocate_blocks_in_soln [243]
+-----------------------------------------------
+                0.00    0.00       1/1           __soln_derived_type_MOD_allocate_soln_sblock [246]
+[244]    0.0    0.00    0.00       1         __soln_derived_type_MOD_allocate_soln_grad [244]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_march [3]
+[245]    0.0    0.00    0.00       1         __soln_derived_type_MOD_allocate_soln_old [245]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_setup_soln_for_eqn_type [240]
+[246]    0.0    0.00    0.00       1         __soln_derived_type_MOD_allocate_soln_sblock [246]
+                0.00    0.00       3/3           __soln_derived_type_MOD_allocate_soln_limiter [223]
+                0.00    0.00       1/1           __soln_derived_type_MOD_allocate_soln_grad [244]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_clean_up_soln_grid [237]
+[247]    0.0    0.00    0.00       1         __soln_derived_type_MOD_deallocate_soln [247]
+                0.00    0.00       1/1           __soln_derived_type_MOD_deallocate_soln_sblock [250]
+-----------------------------------------------
+                0.00    0.00       1/1           __soln_derived_type_MOD_deallocate_soln_sblock [250]
+[248]    0.0    0.00    0.00       1         __soln_derived_type_MOD_deallocate_soln_grad [248]
+-----------------------------------------------
+                0.00    0.00       1/1           __main_MOD_march [3]
+[249]    0.0    0.00    0.00       1         __soln_derived_type_MOD_deallocate_soln_old [249]
+-----------------------------------------------
+                0.00    0.00       1/1           __soln_derived_type_MOD_deallocate_soln [247]
+[250]    0.0    0.00    0.00       1         __soln_derived_type_MOD_deallocate_soln_sblock [250]
+                0.00    0.00       3/3           __soln_derived_type_MOD_deallocate_soln_limiter [224]
+                0.00    0.00       1/1           __soln_derived_type_MOD_deallocate_soln_grad [248]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+   [1] MAIN__ (sensei.f90)    [50] __extrap_interp_MOD_ghost_extrap_face_secondorder [206] __limiter_calculations_MOD_frozen_limiter
+ [218] __bcinput_MOD_assign_bc_type [52] __extrap_interp_MOD_ghost_extrap_secondorder [5] __limiter_calculations_MOD_update_limiter
+ [219] __bcinput_MOD_assign_grid_connections [10] __face_reconstruction_MOD_map_variables_for_muscl_i [236] __limiter_functions_MOD_choose_limiter_function
+ [225] __bcinput_MOD_get_bc_dim [60] __face_reconstruction_MOD_map_variables_for_muscl_ins [34] __limiter_functions_MOD_limiter_vanalbada
+ [220] __bcinput_MOD_read_bc_data [11] __face_reconstruction_MOD_muscl_extrapolation [6] __limiter_functions_MOD_limiter_vanleer
+  [55] __bcinput_MOD_read_bc_file [227] __fluid_constants_MOD_set_fluid_constants [237] __main_MOD_clean_up_soln_grid
+ [217] __bcinput_MOD_shift_indicies_to_cells [28] __flux_functions_MOD_choose_flux_function [238] __main_MOD_compute_exact_solution_and_source
+ [216] __bcinput_MOD_shift_indicies_to_nodes [61] __flux_functions_MOD_flux_roe [46] __main_MOD_initialize
+ [226] __eos_MOD_choose_equation_of_state [7] __flux_functions_MOD_flux_vanleer [239] __main_MOD_initialize_soln
+ [212] __eos_MOD_perfect_pt_to_rho [9] __flux_functions_MOD_speed_of_sound [3] __main_MOD_march
+  [22] __euler_bc_face_MOD_set_bc_face [209] __geometry_MOD_cross_product [240] __main_MOD_setup_soln_for_eqn_type
+  [30] __euler_bc_face_MOD_set_euler_face_bc_imax [56] __geometry_MOD_fill_derived_grid [241] __namelist_MOD_read_nml
+  [43] __euler_bc_face_MOD_set_euler_face_bc_imin [57] __geometry_MOD_fill_grid_block [242] __set_constants_MOD_set_pi
+  [37] __euler_bc_face_MOD_set_euler_face_bc_jmax [58] __geometry_MOD_form_derived_grid [243] __soln_derived_type_MOD_allocate_blocks_in_soln
+  [40] __euler_bc_face_MOD_set_euler_face_bc_jmin [228] __geometry_MOD_read_grid_file [244] __soln_derived_type_MOD_allocate_soln_grad
+  [13] __euler_bc_farfield_MOD_euler_farfield_bc_face [229] __geometry_MOD_read_single_block_plot2d_grid [223] __soln_derived_type_MOD_allocate_soln_limiter
+  [24] __euler_bc_farfield_MOD_euler_farfield_bc_flux [210] __geometry_MOD_vector_norm [245] __soln_derived_type_MOD_allocate_soln_old
+  [18] __euler_bc_farfield_MOD_euler_farfield_bc_ghost [230] __grid_derived_type_MOD_allocate_blocks_in_grid [246] __soln_derived_type_MOD_allocate_soln_sblock
+ [205] __euler_bc_farfield_MOD_euler_flux [231] __grid_derived_type_MOD_allocate_derived_grid [247] __soln_derived_type_MOD_deallocate_soln
+  [26] __euler_bc_farfield_MOD_set_farfield_bc_face [232] __grid_derived_type_MOD_allocate_grid_block [248] __soln_derived_type_MOD_deallocate_soln_grad
+  [19] __euler_bc_farfield_MOD_set_farfield_bc_ghost [233] __grid_derived_type_MOD_deallocate_derived_grid [224] __soln_derived_type_MOD_deallocate_soln_limiter
+  [33] __euler_bc_farfield_MOD_speed_of_sound [234] __grid_derived_type_MOD_deallocate_grid [249] __soln_derived_type_MOD_deallocate_soln_old
+  [14] __euler_bc_ghost_MOD_euler_bc_ghost_update [235] __grid_derived_type_MOD_deallocate_grid_block [250] __soln_derived_type_MOD_deallocate_soln_sblock
+  [16] __euler_bc_ghost_MOD_set_bc [47] __inviscid_bcflux_MOD_euler_bc_flux_imax [211] __solution_helper_MOD_interchange_block_data_euler
+  [38] __euler_bc_ghost_MOD_set_ghost_bc_imax [42] __inviscid_bcflux_MOD_euler_bc_flux_imin [12] __time_step_MOD_speed_of_sound
+  [44] __euler_bc_ghost_MOD_set_ghost_bc_imin [29] __inviscid_bcflux_MOD_euler_bc_flux_jmax [8] __time_step_MOD_time_step_i
+  [23] __euler_bc_ghost_MOD_set_ghost_bc_jmax [41] __inviscid_bcflux_MOD_euler_bc_flux_jmin [35] _gfortran_internal_pack
+  [27] __euler_bc_ghost_MOD_set_ghost_bc_jmin [20] __inviscid_bcflux_MOD_set_bcflux [15] _gfortran_select_string
+ [207] __euler_bc_wall_MOD_euler_slip_wall_bc_face [21] __inviscid_bcflux_MOD_set_farfield_bcflux [36] _gfortrani_compare_string
+  [53] __euler_bc_wall_MOD_euler_slip_wall_bc_ghost [64] __inviscid_bcflux_MOD_set_wall_bcflux [62] _gfortrani_get_mem
+ [208] __euler_bc_wall_MOD_set_wall_bc_face [25] __inviscid_rhs_MOD_check_convergence [17] _gfortrani_internal_pack_r8
+  [54] __euler_bc_wall_MOD_set_wall_bc_ghost [4] __inviscid_rhs_MOD_form_rhs_i [39] _gfortrani_internal_unpack_r8
+  [31] __extrap_interp_MOD_f_extrap [221] __io_MOD_find_available_unit [63] _gfortrani_memcmp_char4
+  [32] __extrap_interp_MOD_face_extrap_secondorder [222] __io_MOD_open_existing_file [48] cleanup (main.c)
+  [51] __extrap_interp_MOD_g_extrap [213] __io_bc_farfield_MOD_read_bc_farfield [45] namelist_write_newline (write.c)
+  [49] __extrap_interp_MOD_g_extrap_face [214] __io_bc_farfield_MOD_speed_of_sound
+  [59] __extrap_interp_MOD_ghost_extrap_face_firstorder [215] __io_bc_wall_MOD_read_bc_wall
