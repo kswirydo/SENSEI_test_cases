@@ -2,10 +2,10 @@
   job_name     = 'svf129'
   restart      = .false.
   flow_eqn     = 'euler'
-  iter_max     = 60000
+  iter_max     = 20000
   iter_res     = 100
   iter_soln    = -1
-  first_order  = 18000
+  first_order  = 9000
 /
 
 &grid
@@ -32,8 +32,8 @@
 &time_stepping
   solver    = 'explicit'
   rk_steps  = 1
-  cfl       = 0.2
-  cfl_max   = 0.2
+  cfl       = 0.3
+  cfl_max   = 0.3
   cfl_ramp  = 10000
   tolerance = 4.4e-12
 /

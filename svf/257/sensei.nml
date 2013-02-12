@@ -2,9 +2,10 @@
   job_name     = 'svf257'
   restart      = .false.
   flow_eqn     = 'euler'
-  iter_max     = 22000
+  iter_max     = 25000
   iter_res     = 100
   iter_soln    = -1
+  first_order  = 3000
 /
 
 &grid
@@ -22,7 +23,7 @@
   flux_scheme = 'vanleer'
   cx2         = 0.0
   cx4         = 0.03125
-  muscl       = .false.
+  muscl       = .true.
   kappa       = -1.0
   flux_lim    = 'none'
   freeze_lim  = -1
@@ -31,8 +32,8 @@
 &time_stepping
   solver    = 'explicit'
   rk_steps  = 1
-  cfl       = 0.25
-  cfl_max   = 0.25
+  cfl       = 0.3
+  cfl_max   = 0.3
   cfl_ramp  = 10000
   tolerance = 4.4e-12
 /
@@ -46,7 +47,7 @@
 /
 
 &bc
-bc_order = 1
+bc_order = 2
 /
 
 &exact
