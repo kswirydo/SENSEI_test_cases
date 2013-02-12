@@ -5,7 +5,7 @@
   iter_max     = 20000
   iter_res     = 100
   iter_soln    = -1
-  first_order  = 9000
+  first_order  = 3000
 /
 
 &grid
@@ -20,7 +20,7 @@
 /
 
 &flux
-  flux_scheme = 'vanleer'
+  flux_scheme = 'sw'
   cx2         = 0.0
   cx4         = 0.03125
   muscl       = .true.
