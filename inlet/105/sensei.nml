@@ -1,0 +1,54 @@
+&project
+  job_name     = 'inlet.105x33'
+  restart      = .false.
+  flow_eqn     = 'euler'
+  iter_max     = 40000
+  iter_res     = 100
+  iter_soln    = -1
+  first_order  = 5000
+/
+
+&grid
+  mg_levels       = 1
+  sequence_levels = 1
+  n_ghost_cells   = 2
+/
+
+&fluid
+  gamma   = 1.4
+  r_gas   = 287.0
+/
+
+&flux
+  flux_scheme = 'vanleer'
+  cx2         = 0.0
+  cx4         = 0.03125
+  muscl       = .true.
+  kappa       = -1.0
+  flux_lim    = 'minmod'
+  freeze_lim  = 10000
+/
+
+&time_stepping
+  solver    = 'explicit'
+  rk_steps  = 1
+  cfl       = 0.3
+  cfl_max   = 0.3
+  global_dt = .false.
+  prescribed_dt = .false.
+  dt_set     = 0.001
+  cfl_ramp  = 10000
+  tolerance = 6.0e-14
+/
+
+&flow_init
+  rho_init(0)      = 0.197016651
+  vel_init(1:3,0)  = 1181.12218, 0.0, 0.0
+  p_init(0)        = 12270.0
+  temp_init(0)     = 217.0
+  turb_init(1:4,0) = 0.0
+/
+
+&bc
+  bc_order = 2
+/
