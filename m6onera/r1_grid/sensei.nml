@@ -2,8 +2,7 @@
   job_name     = 'm6onera'
   restart      = .false.
   flow_eqn     = 'euler'
-  iter_max     = 150000
-  iter_res     = 100
+  iter_max     = 250000
   iter_soln    = -1
   first_order  = 1
 /
@@ -33,7 +32,7 @@
   solver    = 'explicit'
   rk_steps  = 4
   cfl       = 0.2
-  cfl_max   = 0.4
+  cfl_max   = 0.8
   cfl_ramp  = 10000
   tolerance = 5.0e-12
 /
@@ -47,5 +46,5 @@
 /
 
 &bc
-  bc_order = 1
+  bc_order = 2
 /
