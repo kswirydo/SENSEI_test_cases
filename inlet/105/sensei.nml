@@ -3,7 +3,7 @@
   restart      = .false.
   flow_eqn     = 'euler'
   iter_max     = 40000
-  iter_res     = 100
+  restart_freq = 5000
   iter_soln    = -1
   first_order  = 5000
 /
@@ -38,7 +38,7 @@
   prescribed_dt = .false.
   dt_set     = 0.001
   cfl_ramp  = 10000
-  tolerance = 6.0e-14
+  tolerance = 9.0e-14
 /
 
 &flow_init
