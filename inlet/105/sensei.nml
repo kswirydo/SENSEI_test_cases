@@ -26,7 +26,7 @@
   muscl       = .true.
   kappa       = -1.0
   flux_lim    = 'minmod'
-  freeze_lim  = 10000
+  freeze_lim  = 6000
 /
 
 &time_stepping
