@@ -4,6 +4,7 @@
   flow_eqn     = 'euler'
   iter_max     = 20000
   restart_freq = 10000
+  res_out      = 100
   iter_soln    = -1
   first_order  = 5000
 /

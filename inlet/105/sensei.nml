@@ -2,8 +2,9 @@
   job_name     = 'inlet.105x33'
   restart      = .false.
   flow_eqn     = 'euler'
-  iter_max     = 40000
+  iter_max     = 20000
   restart_freq = 5000
+  res_out      = 100
   iter_soln    = -1
   first_order  = 5000
 /
