@@ -40,7 +40,7 @@
 
 &flow_init
   rho_init(0)      = 1.17642
-  vel_init(1:3,0)  = 250, 50.0, 0.0
+  vel_init(1:3,0)  = 250, 0.0, 0.0
   p_init(0)        = 101325.0
   temp_init(0)     = 300.0
   turb_init(1:4,0) = 0.0
