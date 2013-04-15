@@ -2,11 +2,11 @@
   job_name     = 'inlet.105x33'
   restart      = .false.
   flow_eqn     = 'euler'
-  iter_max     = 10000
+  iter_max     = 15000
   restart_freq = 10000
   res_out      = 100
-  iter_soln    = -1
-  first_order  = 5000
+  iter_soln    = 250
+  first_order  = 3000
 /
 
 &grid
@@ -17,7 +17,7 @@
 
 &fluid
   gamma   = 1.4
-  r_gas   = 287.0
+  mol_weight   = 28.89
 /
 
 &flux
@@ -27,18 +27,19 @@
   muscl       = .true.
   kappa       = -1.0
   flux_lim    = 'minmod'
-  freeze_lim  = 6000
+  freeze_lim  = 8000
 /
 
 &time_stepping
   solver    = 'explicit'
   rk_steps  = 1
-  cfl       = 0.3
-  cfl_max   = 0.3
+  cfl       = 0.3, 0.3
+  cfl_max   = 0.6, 0.3
+  ramp_start = 1000
+  ramp_end   = 4000
   global_dt = .false.
   prescribed_dt = .false.
   dt_set     = 0.001
-  cfl_ramp  = 10000
   tolerance = 6.0e-14
 /
 
@@ -51,5 +52,21 @@
 /
 
 &bc
-  bc_order = 1
+  bc_order = 2
 /
+
+&tecplot_io
+  primitive = .true.
+  source_terms = .false.
+  residuals = .true.
+  limiters = .false.
+/
+
+&exact
+  use_exact = .false.
+  exact_solution = 'euler_sonic_positive_interior'
+  flux_source = .false.
+  quadorder = 2
+/
+
+
