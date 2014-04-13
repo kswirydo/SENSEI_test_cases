@@ -2,3 +2,6 @@
 *.rst
 *.phy
 *.out
+*.nml.*
+*.rst.*
+fort.*
