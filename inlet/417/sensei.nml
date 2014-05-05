@@ -1,55 +1,98 @@
 &project
-  job_name     = 'inlet.417.129'
-  restart      = .false.
-  flow_eqn     = 'euler'
-  iter_max     = 40000
-  restart_freq = 5000
-  res_out      = 100
-  iter_soln    = -1
-  first_order  = 10000
-/
-
-&grid
-  mg_levels       = 1
-  sequence_levels = 1
-  n_ghost_cells   = 2
-/
-
-&fluid
-  gamma   = 1.4
-  r_gas   = 287.0
-/
-
-&flux
-  flux_scheme = 'vanleer'
-  cx2         = 0.0
-  cx4         = 0.03125
-  muscl       = .true.
-  kappa       = -1.0
-  flux_lim    = 'minmod'
-  freeze_lim  = 20000
-/
-
-&time_stepping
-  solver    = 'explicit'
-  rk_steps  = 1
-  cfl       = 0.3
-  cfl_max   = 0.3
-  global_dt = .false.
-  prescribed_dt = .false.
-  dt_set     = 0.001
-  cfl_ramp  = 10000
-  tolerance = 6.0e-14
-/
-
-&flow_init
-  rho_init(0)      = 0.197016651
-  vel_init(1:3,0)  = 1181.12218, 0.0, 0.0
-  p_init(0)        = 12270.0
-  temp_init(0)     = 217.0
-  turb_init(1:4,0) = 0.0
-/
-
-&bc
-  bc_order = 2
-/
+  job_name     = 'inlet.417x129'
+ RESTART=F,
+ RESTART_SAVE_FREQ=         -1,
+ FLOW_EQN="euler       ",
+ ITERATIONS=          750,
+ RESIDUAL_PRINT_FREQ=          1,
+ SOLN_SAVE_FREQ=         -1,
+ AXISYMMETRIC=F,
+ /
+&GRID
+ MG_LEVELS=          1,
+ SEQUENCE_LEVELS=          1,
+ N_GHOST_CELLS=          3*3          ,
+ /
+&PARALLEL
+ OMP_NODES=          1,
+ MPI_NODES=          1,
+ /
+&FLUID
+ GAMMA=  1.3999999999999999     ,
+ PR= 0.71999999999999997     ,
+ MOL_WEIGHT=  28.890000000000001     ,
+ MU=  1.7893999999999998E-005,
+ VISCOSITY_LAW="sutherlands         ",
+ /
+&FLUX
+ HIGHER_ORDER_SCHEME="muscl     ",
+ FLUX_SCHEME="vanleer   ",
+ MUSCL=T,
+ KAPPA=0.3333333333333333333
+ FLUX_LIM="michalak",
+ FIRST_ORDER=       200,
+ FREEZE_LIM=        570,
+ ORDER=          1,
+ /
+&TIME_STEPPING
+ SOLVER="implicit  ",
+ RK_STEPS=          1,
+ CFL= 2*1.0000000000000000       ,
+ CFL_MAX= 20.00000000000000, 10.0       ,
+ RAMP_START=100, 100        ,
+ RAMP_END= 200,200        ,
+ GLOBAL_DT=F,
+ PRESCRIBED_DT=F,
+ DT_SET=  1.0000000000000000E-003,
+ TOLERANCE=  5.9999999999999997E-014,
+ /
+&FLOW_INIT
+ RHO_INIT= 0.19701665099999999     , 10*0.0000000000000000       ,
+ VEL_INIT=  1181.1221800000001     , 32*0.0000000000000000       ,
+ TEMP_INIT=  217.00000000000000     , 10*0.0000000000000000       ,
+ P_INIT=  12270.000000000000     , 10*0.0000000000000000       ,
+ TURB_INIT= 44*0.0000000000000000       ,
+ /
+&BC
+ BC_ORDER=          2,
+ APPLY_BC_AT="ghost",
+ /
+&EXACT
+ USE_EXACT=F,
+ EXACT_SOLUTION="euler_sonic_positive_interior           ",
+ MMS_NUMBER=         -1,
+ MMS_CONFIG_FILE="mms.config                                                                                          ",
+ FLUX_SOURCE=F,
+ QUADORDER=          2,
+ GRID_ORDER=          1,
+ /
+&TECPLOT_IO
+ PRIMITIVE=T,
+ SOURCE_TERMS=F,
+ RESIDUALS=T,
+ LIMITERS=F,
+ INCLUDE_GHOST_CELLS=F,
+ /
+&TE_ESTIMATION
+ KEXACT_ORDER=          4,
+ WEAK_FORM=F,
+ GRID_ORDER=          1,
+ TE_METHOD="cr-kexact                     ",
+ COMPUTE_ALL_TE=F,
+ NODE_OUTPUT=F,
+ INTERP_ORDER=          1,
+ /
+&DE_ESTIMATION
+ RESIDUAL_DE_METHOD="none                ",
+ COMPUTE_RESIDUAL_DE=F,
+ /
+&LHS
+ SOLVER_TYPE="bicgstab",
+ FIRST_ORDER_LHS=T,
+ JACOBIAN="vanleer   ",
+ KRYLOV_SIZE=         15,
+ N_RESTARTS=          5,
+ N_ITERATIONS=        100,
+ RELATIVE_TOLERANCE=  9.9999999999999995E-004,
+ ABSOLUTE_TOLERANCE=  1.0000000000000000E-014,
+ /
